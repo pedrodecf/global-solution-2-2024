@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Estilos globais */
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,4 +14,55 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* Envolva as animações em @layer base */
+@layer base {
+  @keyframes float-1 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-7px);
+    }
+  }
+
+  @keyframes float-2 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-7px);
+    }
+  }
+
+  @keyframes float-3 {
+    0%,
+    100% {
+      transform: translateY(-6px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Envolva as classes personalizadas em @layer utilities */
+@layer utilities {
+  .animate-float-1 {
+    animation: float-1 5s ease-in-out infinite;
+  }
+  .animate-float-2 {
+    animation: float-2 6s ease-in-out infinite;
+  }
+  .animate-float-3 {
+    animation: float-3 5s ease-in infinite;
+  }
+  .animate-float-4 {
+    animation: float-2 5s ease-out infinite;
+  }
 }
