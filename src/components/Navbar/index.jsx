@@ -2,7 +2,7 @@ import logo from "../../assets/logo.svg";
 
 export function Navbar() {
   return (
-    <header className="w-full py-4 flex flex-row justify-between">
+    <header className="w-full py-4 flex flex-row justify-between mb-6">
       <img src={logo} alt="Sustergy" className="w-40 h-auto" />
 
       <button

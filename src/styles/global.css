@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos globais */
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,7 +17,6 @@
   font-optical-sizing: auto;
 }
 
-/* Envolva as animações em @layer base */
 @layer base {
   @keyframes float-1 {
     0%,
@@ -51,18 +49,17 @@
   }
 }
 
-/* Envolva as classes personalizadas em @layer utilities */
 @layer utilities {
   .animate-float-1 {
-    animation: float-1 5s ease-in-out infinite;
+    animation: float-1 6s ease-in-out infinite;
   }
   .animate-float-2 {
-    animation: float-2 6s ease-in-out infinite;
+    animation: float-2 7s ease-in-out infinite;
   }
   .animate-float-3 {
-    animation: float-3 5s ease-in infinite;
+    animation: float-3 6s ease-in infinite;
   }
   .animate-float-4 {
-    animation: float-2 5s ease-out infinite;
+    animation: float-2 6s ease-out infinite;
   }
 }
