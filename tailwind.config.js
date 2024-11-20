@@ -18,6 +18,7 @@ export default {
         "dark-green-2": "#030906",
         white: "#FFFFFF",
         gray: "#AEAFAE",
+        primary: "#62E763"
       },
       fontSize: {
         sm: "0.8rem",
