@@ -12,7 +12,7 @@ export function FaleConosco() {
 
   return (
     <Background className="bg-dark-green">
-      <Section className="pt-12 flex flex-col items-center">
+      <Section className="pt-12 pb-24 flex flex-col items-center">
         <Separator className="my-12" />
         <h2 className="text-white text-5xl font-semibold tracking-wide leading-normal ">
           Fale <span className="text-primary">Conosco</span>
