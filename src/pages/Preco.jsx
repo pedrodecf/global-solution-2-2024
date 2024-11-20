@@ -57,7 +57,7 @@ export function Preco() {
           <h2 className="text-white text-5xl font-semibold tracking-wide leading-normal">
             Nossos <span className="text-primary">Preços</span>
           </h2>
-          <p className="text-gray font-light text-sm tracking-wide text-center max-w-[600px] leading-normal mt-2 mb-8">
+          <p className="text-gray font-light text-sm tracking-wide text-center max-w-[600px] leading-normal mt-2 mb-12">
             Escolha o plano que melhor atende às suas necessidades. Oferecemos
             consultas gratuitas, assinaturas mensais e soluções personalizadas
             para companhias elétricas.

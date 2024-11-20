@@ -21,10 +21,10 @@ export function FaleConosco() {
           Tem dúvidas ou precisa de ajuda? Fale conosco! Estamos prontos para
           ajudá-lo a encontrar a melhor opção de energia para você.
         </p>
-        <div className="flex flex-col md:flex-row gap-12 w-full justify-center items-start">
+        <div className="flex flex-col md:flex-row gap-24 w-full justify-center items-start">
           <form
             onSubmit={handleSubmit}
-            className="w-full md:w-1/2 flex flex-col gap-6"
+            className="w-full md:w-2/5 flex flex-col gap-6"
           >
             <input
               type="text"

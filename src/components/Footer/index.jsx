@@ -4,12 +4,10 @@ import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export function Footer() {
   return (
-    <footer className="bg-[#05160e]">
+    <footer className="bg-gradient-to-b from-[#03110C] to-[#030906]">
       <Separator className="mb-12" />
       <div className="max-w-[1280px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center pb-12">
         <img src={logo} alt="Sustergy" className="w-40 h-auto mb-8 md:mb-0" />
-
-        {/* Navegação */}
         <nav>
           <ul className="flex flex-col md:flex-row gap-4 md:gap-8">
             <li>
@@ -34,35 +32,29 @@ export function Footer() {
             </li>
           </ul>
         </nav>
-
-        {/* Redes Sociais */}
         <div className="flex gap-6 mt-8 md:mt-0">
           <a
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaFacebook className="text-gray hover:text-white text-lg"/>
+            <FaFacebook className="text-gray hover:text-white text-lg" />
           </a>
           <a
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-gray hover:text-white text-lg"/>
-
+            <FaInstagram className="text-gray hover:text-white text-lg" />
           </a>
           <a
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin className="text-gray hover:text-white text-lg"/>
-
+            <FaLinkedin className="text-gray hover:text-white text-lg" />
           </a>
         </div>
-
-        {/* Links Legais */}
         <div className="flex flex-col md:flex-row gap-2 md:gap-4 mt-8 md:mt-0">
           <a href="#" className="text-sm text-gray hover-nav">
             Política de Privacidade
