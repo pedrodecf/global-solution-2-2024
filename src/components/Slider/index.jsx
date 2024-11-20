@@ -18,7 +18,7 @@ const logos = [
 
 const LogoSlider = () => {
   return (
-    <div className="relative overflow-hidden py-16 whitespace-nowrap logos group">
+    <div className="relative overflow-hidden py-24 whitespace-nowrap logos group">
       <div className="inline-block animate-slide logos-slide">
         {logos.map((logo, index) => (
           <img
