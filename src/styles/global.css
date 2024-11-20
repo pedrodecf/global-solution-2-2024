@@ -63,3 +63,25 @@
     animation: float-2 6s ease-out infinite;
   }
 }
+
+@layer components {
+  .logos::before,
+  .logos::after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: '';
+    z-index: 2;
+  }
+
+  .logos::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+  }
+
+  .logos::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+  }
+}

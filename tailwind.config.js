@@ -4,6 +4,15 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      keyframes: {
+        slide: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        slide: "35s linear infinite slide",
+      },
       colors: {
         "dark-green": "#03110C",
         "dark-green-2": "#030906",
