@@ -1,4 +1,3 @@
-import { Navbar } from "../Navbar";
 import Background from "../ui/Background";
 import Section from "../ui/Section";
 import ellipse from "../../assets/ellipse.svg";

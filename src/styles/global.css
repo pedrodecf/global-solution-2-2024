@@ -77,16 +77,6 @@
     content: "";
     z-index: 2;
   }
-
-  .logos::before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
-  }
-
-  .logos::after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
-  }
 }
 
 .hover-nav {

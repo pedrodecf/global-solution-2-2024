@@ -1,11 +1,19 @@
 import Background from "../ui/Background";
 import Section from "../ui/Section";
+import Separator from "../ui/Separator";
 import { User } from "../ui/User";
+import ellipse from "../../assets/ellipse.svg";
 
 export function QuemSomos() {
   return (
     <Background className="bg-dark-green">
-      <Section className="pt-12">
+      <img
+        src={ellipse}
+        alt="ellipse"
+        className="h-[75vh] absolute left-5 top-5 no-drag brightness-110 z-30"
+      />
+      <Section className="relative">
+        <Separator className="mb-12" />
         <h2 className="text-white text-5xl font-semibold tracking-wide leading-normal">
           Quem <span className="text-primary">Somos</span>
         </h2>
