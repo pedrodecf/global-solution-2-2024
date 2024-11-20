@@ -71,7 +71,7 @@
     top: 0;
     width: 250px;
     height: 100%;
-    content: '';
+    content: "";
     z-index: 2;
   }
 
@@ -84,4 +84,38 @@
     right: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
   }
+}
+
+.hover-nav {
+  position: relative;
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.hover-nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition:
+    width 0.3s ease,
+    transform 0.3s ease;
+  transform-origin: left;
+}
+
+.hover-nav:hover::after {
+  width: 100%;
+}
+
+.hover-nav:hover::after,
+.hover-nav::after {
+  transform: scaleX(1);
 }
