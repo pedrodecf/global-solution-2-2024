@@ -21,8 +21,7 @@ export function Hero() {
         alt="ellipse"
         className="h-[80vh] absolute right-5 bottom-5 no-drag brightness-110"
       />
-      <Section className="relative">
-        <Navbar />
+      <Section className="relative" haveNav>
         <h1 className="text-white text-center text-6xl font-semibold tracking-wide leading-tight">
           Escolha{" "}
           <span className="bg-gradient-to-r from-[#62E763] to-[#3CC889] inline-block text-transparent bg-clip-text">

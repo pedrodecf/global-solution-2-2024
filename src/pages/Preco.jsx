@@ -52,8 +52,8 @@ export function Preco() {
 
   return (
     <>
-      <Background className="bg-dark-green h-screen">
-        <Section>
+      <Background className="bg-dark-green h-screen min-h-screen">
+        <Section haveNav>
           <h2 className="text-white text-5xl font-semibold tracking-wide leading-normal">
             Nossos <span className="text-primary">Preços</span>
           </h2>
