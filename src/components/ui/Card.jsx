@@ -13,6 +13,7 @@ export function Card({
   melhorOpcao = false,
   melhorOpcaoTexto = "",
   className = "",
+  link
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -54,18 +55,33 @@ export function Card({
             </p>
           ))}
         </div>
-        <button
-          className={`bg-gradient-to-r from-[#62E763] to-[#3CC889]
-          [background-size:200%_auto]
-          transition-all duration-500
-          hover:[background-position:right_center]
-          px-6 py-2 rounded-lg w-full text-sm text-black ${cursorClass}`}
-          disabled={buttonDisabled}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          {buttonText}
-        </button>
+        {link ? (
+          <a
+            href={link}
+            className={`bg-gradient-to-r from-[#62E763] to-[#3CC889]
+            [background-size:200%_auto]
+            transition-all duration-500
+            hover:[background-position:right_center]
+            px-6 py-2 rounded-lg w-full text-sm text-black text-center ${cursorClass}`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            {buttonText}
+          </a>
+        ) : (
+          <button
+            className={`bg-gradient-to-r from-[#62E763] to-[#3CC889]
+            [background-size:200%_auto]
+            transition-all duration-500
+            hover:[background-position:right_center]
+            px-6 py-2 rounded-lg w-full text-sm text-black ${cursorClass}`}
+            disabled={buttonDisabled}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            {buttonText}
+          </button>
+        )}
       </div>
     </div>
   );

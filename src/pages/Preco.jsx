@@ -1,6 +1,7 @@
 import Background from "../components/ui/Background";
 import { Card } from "../components/ui/Card";
 import Section from "../components/ui/Section";
+import ellipse from "../assets/ellipse.svg";
 
 export function Preco() {
   const planos = [
@@ -33,6 +34,7 @@ export function Preco() {
       beta: false,
       melhorOpcao: true,
       melhorOpcaoTexto: "POR TEMPO LIMITADO!",
+      link: "/consulta",
     },
     {
       plano: "Empresas",
@@ -53,6 +55,16 @@ export function Preco() {
   return (
     <>
       <Background className="bg-dark-green h-screen min-h-screen">
+        <img
+          src={ellipse}
+          alt="ellipse"
+          className="h-[75vh] absolute left-5 top-5 no-drag brightness-110"
+        />
+        <img
+          src={ellipse}
+          alt="ellipse"
+          className="h-[80vh] absolute right-5 bottom-5 no-drag brightness-110"
+        />
         <Section haveNav>
           <h2 className="text-white text-5xl font-semibold tracking-wide leading-normal">
             Nossos <span className="text-primary">Preços</span>

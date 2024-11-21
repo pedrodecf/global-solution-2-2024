@@ -2,8 +2,8 @@ import logo from "../../assets/logo.svg";
 
 export function Navbar() {
   return (
-    <div className="relative z-50  max-w-[1280px] mx-auto px-8">
-      <header className="w-full py-4 flex flex-row justify-between mb-6 items-center absolute">
+    <div className="max-w-[1280px] mx-auto flex flex-col items-center relative z-50">
+      <header className="px-8 w-full py-4 flex flex-row justify-between mb-6 items-center absolute">
         <img src={logo} alt="Sustergy" className="w-40 h-auto" />
         <nav>
           <ul className="flex flex-row gap-8">

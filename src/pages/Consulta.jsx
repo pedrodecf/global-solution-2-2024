@@ -6,6 +6,7 @@ import Section from "../components/ui/Section";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { CardCompany } from "../components/ui/CardCompany";
+import ellipse from "../assets/ellipse.svg";
 
 export function Consulta() {
   const [cep, setCep] = useState("");
@@ -113,7 +114,17 @@ export function Consulta() {
   };
 
   return (
-    <Background className="bg-dark-green h-screen min-h-screen">
+    <Background className="bg-dark-green h-full min-h-screen pb-4">
+      <img
+        src={ellipse}
+        alt="ellipse"
+        className="h-[75vh] absolute left-5 top-5 no-drag brightness-110"
+      />
+      <img
+        src={ellipse}
+        alt="ellipse"
+        className="h-[80vh] absolute right-5 bottom-5 no-drag brightness-110"
+      />
       <Section haveNav>
         <h2 className="text-white text-5xl font-semibold tracking-wide leading-normal ">
           Faça uma <span className="text-primary">Consulta</span>
