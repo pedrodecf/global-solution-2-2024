@@ -66,7 +66,7 @@ export function ComoFunciona() {
           <h3 className="text-white text-3xl font-semibold text-center mb-8">
             Controle sua energia com <span className="text-primary">IA</span>
           </h3>
-          <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-8 justify-center">
             <div className="md:w-1/2">
               <p className="text-gray font-light text-sm tracking-wide leading-normal mb-6">
                 Nosso aplicativo utiliza Inteligência Artificial para monitorar
@@ -84,7 +84,7 @@ export function ComoFunciona() {
             <img
               src={appPreview}
               alt="Prévia do Aplicativo"
-              className="w-full md:w-1/2 rounded-lg"
+              className="w-full max-w-[400px] md:w-1/2 rounded-lg"
             />
           </div>
         </Section>
