@@ -4,11 +4,57 @@ import { generateRandomPoints } from "../utils/generateRandomPoints";
 import Background from "../components/ui/Background";
 import Section from "../components/ui/Section";
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 
 export function Consulta() {
   const [cep, setCep] = useState("");
   const [center, setCenter] = useState([-23.56763, -46.64899]); // FIAP Paulista
   const [points, setPoints] = useState([]);
+
+  const icons = {
+    Eólica: L.icon({
+      iconUrl: "src/assets/types/eolica.png",
+      iconSize: [50, 50],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+    }),
+    Solar: L.icon({
+      iconUrl: "src/assets/types/solar.png",
+      iconSize: [50, 50],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+    }),
+    Hidrelétrica: L.icon({
+      iconUrl: "src/assets/types/hidreletrica.png",
+      iconSize: [50, 50],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+    }),
+    Geotérmica: L.icon({
+      iconUrl: "src/assets/types/geotermica.png",
+      iconSize: [50, 50],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+    }),
+    Biomassa: L.icon({
+      iconUrl: "src/assets/types/biomassa.png",
+      iconSize: [50, 50],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+    }),
+    Nuclear: L.icon({
+      iconUrl: "src/assets/types/nuclear.png",
+      iconSize: [50, 50],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+    }),
+    Default: L.icon({
+      iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+    }),
+  };
 
   function MapView({ center }) {
     const map = useMap();
@@ -117,7 +163,11 @@ export function Consulta() {
               attribution="&copy; OpenStreetMap contributors"
             />
             {points.map((point, index) => (
-              <Marker key={index} position={[point.lat, point.lng]}>
+              <Marker
+                key={index}
+                position={[point.lat, point.lng]}
+                icon={icons[point.type] || icons.Default}
+              >
                 <Popup>
                   <b>Companhia: {point.name}</b>
                   <br />

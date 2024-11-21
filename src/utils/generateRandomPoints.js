@@ -6,8 +6,6 @@ export function generateRandomPoints(centerLat, centerLng, numPoints) {
     "Geotérmica",
     "Biomassa",
     "Nuclear",
-    "Marinha",
-    "Térmica",
   ];
 
   const names = [
