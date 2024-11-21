@@ -25,9 +25,20 @@ export function Consulta() {
         return;
       }
 
+      // Modificação: Adicionar um atraso para não exceder 1 requisição por segundo
+      await new Promise((resolve) => setTimeout(resolve, 1100)); // Espera 1.1 segundos
+
+      // Modificação: Incluir um cabeçalho 'Referrer' que identifica o aplicativo
       const response = await fetch(
-        `https://nominatim.openstreetmap.org/search?format=json&postalcode=${cep}&country=Brazil`
+        `https://nominatim.openstreetmap.org/search?format=json&postalcode=${cep}&country=Brazil`,
+        {
+          headers: {
+            // Substitua pela URL do seu aplicativo ou um identificador único
+            Referer: "http://localhost:5173/", // Modificação aqui
+          },
+        }
       );
+
       const data = await response.json();
 
       if (data && data.length > 0) {
@@ -67,6 +78,15 @@ export function Consulta() {
           <button type="submit">Consultar</button>
         </form>
 
+        {/* Modificação: Adicionar a atribuição ao OpenStreetMap e Nominatim */}
+        <div style={{ textAlign: "center", marginTop: "10px" }}>
+          <small>
+            Os dados de geocodificação são fornecidos por{" "}
+            <a href="https://nominatim.openstreetmap.org/">Nominatim</a>, do{" "}
+            <a href="https://www.openstreetmap.org/">OpenStreetMap</a>.
+          </small>
+        </div>
+
         <div
           style={{
             display: "flex",
@@ -76,7 +96,7 @@ export function Consulta() {
         >
           <MapContainer
             center={center}
-            zoom={15} 
+            zoom={15}
             key={center.toString()}
             style={{ height: "500px", width: "500px" }}
             dragging={false}
