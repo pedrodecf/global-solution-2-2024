@@ -23,7 +23,7 @@ export function Preco() {
       plano: "Consulta Gratuita",
       valor: "Grátis",
       descricao:
-        "Consulta gratuita, descubra as melhores opções de energia na sua região",
+        "Consulte grátis, descubra as melhores opções de energia na sua região",
       mensal: false,
       textoBtn: "Consultar",
       beneficios: [
@@ -33,7 +33,7 @@ export function Preco() {
       ],
       beta: false,
       melhorOpcao: true,
-      melhorOpcaoTexto: "POR TEMPO LIMITADO!",
+      melhorOpcaoTexto: "POR TEMPO ILIMITADO!",
       link: "/consulta",
     },
     {
@@ -54,7 +54,7 @@ export function Preco() {
 
   return (
     <>
-      <Background className="bg-dark-green h-screen min-h-screen">
+      <Background className="bg-dark-green h-full min-h-[90%] pb-12">
         <img
           src={ellipse}
           alt="ellipse"
@@ -79,6 +79,9 @@ export function Preco() {
               <Card key={index} {...plano} />
             ))}
           </div>
+          <p className="text-gray mt-8 text-left w-full">
+            * Os planos podem sofrer alterações futuramente
+          </p>
         </Section>
       </Background>
     </>

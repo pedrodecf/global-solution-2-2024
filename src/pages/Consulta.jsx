@@ -113,7 +113,7 @@ export function Consulta() {
   };
 
   return (
-    <Background className="bg-dark-green h-full min-h-screen pb-4 z-10">
+    <Background className="bg-dark-green h-full min-h-[90% pb-12 z-10">
       <img
         src={ellipse}
         alt="ellipse"
@@ -174,7 +174,7 @@ export function Consulta() {
               boxZoom={false}
               keyboard={false}
               zoomControl={false}
-              style={{ height: "500px", width: "500px", borderRadius: "10px" }}
+              style={{ height: "500px", width: "750px", borderRadius: "10px" }}
             >
               <MapView center={center} />
               <TileLayer
