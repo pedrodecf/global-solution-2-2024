@@ -19,7 +19,7 @@ export function ComoFunciona() {
           className="h-[80vh] absolute right-5 bottom-5 no-drag brightness-110"
         />
         <Section haveNav className="relative">
-          <h2 className="text-white text-5xl font-semibold tracking-wide leading-normal ">
+          <h2 className="text-white text-5xl font-semibold ">
             Como <span className="text-primary">Funciona?</span>
           </h2>
           <p className="text-gray font-light text-sm tracking-wide text-center max-w-[700px] leading-normal mt-2 mb-12">
@@ -39,7 +39,7 @@ export function ComoFunciona() {
               alt="Mercado Livre de Energia"
               className="h-full max-h-[250px] w-auto"
             />
-            <p className="text-gray font-light text-sm tracking-wide leading-normal md:w-1/2">
+            <p className="text-gray font-light text-[15px] md:w-1/2">
               O Mercado Livre de Energia é um ambiente de negociação onde
               consumidores podem escolher seus fornecedores de energia,
               negociando preços e condições que melhor atendam às suas
@@ -54,7 +54,7 @@ export function ComoFunciona() {
           <h3 className="text-white text-3xl font-semibold text-center mb-8">
             Como a <span className="text-primary">Sustergy</span> ajuda você
           </h3>
-          <p className="text-gray font-light text-sm tracking-wide text-center max-w-[800px] mx-auto mb-12">
+          <p className="text-gray font-light text-[15px] tracking-wide text-center max-w-[800px] mx-auto mb-12">
             A Sustergy simplifica todo o processo de escolha, permitindo que
             você compare distribuidores, tipos de energia e preços em um único
             lugar. Nossa plataforma intuitiva facilita a tomada de decisão,
@@ -68,13 +68,13 @@ export function ComoFunciona() {
           </h3>
           <div className="flex flex-col md:flex-row items-center gap-8 justify-center">
             <div className="md:w-1/2">
-              <p className="text-gray font-light text-sm tracking-wide leading-normal mb-6">
+              <p className="text-gray font-light text-[15px] mb-6">
                 Nosso aplicativo utiliza Inteligência Artificial para monitorar
                 e otimizar o consumo de energia em sua casa. Receba dicas
                 personalizadas, alertas sobre desperdícios e acompanhe seu
                 consumo em tempo real, diretamente no seu smartphone.
               </p>
-              <ul className="text-gray font-light text-sm tracking-wide leading-normal list-disc list-inside">
+              <ul className="text-gray font-light text-[15px] list-disc list-inside">
                 <li>Monitoramento em tempo real do consumo</li>
                 <li>Dicas personalizadas para economizar energia</li>
                 <li>Alertas sobre desperdício</li>
