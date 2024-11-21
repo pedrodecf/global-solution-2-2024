@@ -7,7 +7,7 @@ import "leaflet/dist/leaflet.css";
 
 export function Consulta() {
   const [cep, setCep] = useState("");
-  const [center, setCenter] = useState([-23.5505, -46.6333]); // São Paulo
+  const [center, setCenter] = useState([-23.56763, -46.64899]); // FIAP Paulista
   const [points, setPoints] = useState([]);
 
   function MapView({ center }) {
@@ -19,73 +19,78 @@ export function Consulta() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 1000);
+
     try {
       if (!/^\d{8}$/.test(cep)) {
         alert("Por favor, insira um CEP válido com 8 dígitos.");
         return;
       }
 
-      // Modificação: Adicionar um atraso para não exceder 1 requisição por segundo
-      await new Promise((resolve) => setTimeout(resolve, 1100)); // Espera 1.1 segundos
-
-      // Modificação: Incluir um cabeçalho 'Referrer' que identifica o aplicativo
       const response = await fetch(
-        `https://nominatim.openstreetmap.org/search?format=json&postalcode=${cep}&country=Brazil`,
+        `https://cep.awesomeapi.com.br/json/${cep}`,
         {
-          headers: {
-            // Substitua pela URL do seu aplicativo ou um identificador único
-            Referer: "http://localhost:5173/", // Modificação aqui
-          },
+          signal: controller.signal,
         }
       );
 
+      clearTimeout(timeoutId);
+
       const data = await response.json();
+      console.log(data);
 
-      if (data && data.length > 0) {
-        const { lat, lon } = data[0];
+      if (response.ok) {
+        const { lat, lng } = data;
 
-        setCenter([parseFloat(lat), parseFloat(lon)]);
+        setCenter([parseFloat(lat), parseFloat(lng)]);
         const randomPoints = generateRandomPoints(
           parseFloat(lat),
-          parseFloat(lon),
+          parseFloat(lng),
           3
         );
         setPoints(randomPoints);
       } else {
-        alert("CEP não encontrado. Por favor, verifique e tente novamente.");
+        alert(data.message || "Ocorreu um erro na consulta do CEP.");
       }
     } catch (error) {
-      console.error("Erro ao geocodificar o CEP:", error);
-      alert(
-        "Ocorreu um erro ao buscar o CEP. Por favor, tente novamente mais tarde."
-      );
+      if (error.name === "AbortError") {
+        alert("A requisição demorou muito, por favor, tente novamente.");
+      } else {
+        console.error("Erro ao geocodificar o CEP:", error);
+        alert(
+          "Ocorreu um erro ao buscar o CEP. Por favor, tente novamente mais tarde."
+        );
+      }
     }
   };
 
   return (
-    <Background className="bg-dark-green">
+    <Background className="bg-dark-green h-screen min-h-screen">
       <Section haveNav>
-        <form onSubmit={handleSubmit} style={{ textAlign: "center" }}>
-          <label>
-            Insira seu CEP:
-            <input
-              type="text"
-              value={cep}
-              onChange={(e) => setCep(e.target.value)}
-              placeholder="Ex: 01001000"
-            />
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col items-center space-y-4 max-w-[500px] w-full mx-auto"
+        >
+          <label className="w-full">
+            <span className="text-white font-semibold">Insira seu CEP:</span>
+            <div className="flex flex-row gap-2 mt-2">
+              <input
+                type="text"
+                value={cep}
+                onChange={(e) => setCep(e.target.value)}
+                placeholder="Ex: 01001000"
+                className="px-4 py-2 w-full bg-dark-green-2 text-white border border-gray rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <button
+                type="submit"
+                className="px-6 py-2 bg-gradient-to-r from-[#62E763] to-[#3CC889] text-white rounded-md hover:opacity-90 transition-opacity duration-300"
+              >
+                Consultar
+              </button>
+            </div>
           </label>
-          <button type="submit">Consultar</button>
         </form>
-
-        {/* Modificação: Adicionar a atribuição ao OpenStreetMap e Nominatim */}
-        <div style={{ textAlign: "center", marginTop: "10px" }}>
-          <small>
-            Os dados de geocodificação são fornecidos por{" "}
-            <a href="https://nominatim.openstreetmap.org/">Nominatim</a>, do{" "}
-            <a href="https://www.openstreetmap.org/">OpenStreetMap</a>.
-          </small>
-        </div>
 
         <div
           style={{
