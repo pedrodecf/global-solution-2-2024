@@ -65,7 +65,7 @@ export function Preco() {
           alt="ellipse"
           className="h-[80vh] absolute right-5 bottom-5 no-drag brightness-110"
         />
-        <Section haveNav>
+        <Section haveNav className="relative">
           <h2 className="text-white text-5xl font-semibold tracking-wide leading-normal">
             Nossos <span className="text-primary">Preços</span>
           </h2>

@@ -28,14 +28,15 @@ export function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#contato" className="text-sm text-gray hover-nav">
+              <a href="/contato" className="text-sm text-gray hover-nav">
                 Contato
               </a>
             </li>
           </ul>
         </nav>
 
-        <button
+        <a
+          href="/consulta"
           className="bg-gradient-to-r from-[#62E763] to-[#3CC889]
             [background-size:200%_auto]
             transition-all duration-500
@@ -43,7 +44,7 @@ export function Navbar() {
             px-6 py-2 rounded-3xl text-sm"
         >
           Faça uma consulta
-        </button>
+        </a>
       </header>
     </div>
   );

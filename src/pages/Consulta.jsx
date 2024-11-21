@@ -86,7 +86,6 @@ export function Consulta() {
       clearTimeout(timeoutId);
 
       const data = await response.json();
-      console.log(data);
 
       if (response.ok) {
         const { lat, lng } = data;
@@ -114,7 +113,7 @@ export function Consulta() {
   };
 
   return (
-    <Background className="bg-dark-green h-full min-h-screen pb-4">
+    <Background className="bg-dark-green h-full min-h-screen pb-4 z-10">
       <img
         src={ellipse}
         alt="ellipse"
@@ -125,7 +124,7 @@ export function Consulta() {
         alt="ellipse"
         className="h-[80vh] absolute right-5 bottom-5 no-drag brightness-110"
       />
-      <Section haveNav>
+      <Section haveNav className="relative">
         <h2 className="text-white text-5xl font-semibold tracking-wide leading-normal ">
           Faça uma <span className="text-primary">Consulta</span>
         </h2>
