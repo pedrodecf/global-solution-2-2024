@@ -7,6 +7,12 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { CardCompany } from "../components/ui/CardCompany";
 import ellipse from "../assets/ellipse.svg";
+import eolica from "../assets/types/eolica.png";
+import solar from "../assets/types/solar.png";
+import hidreletrica from "../assets/types/hidreletrica.png";
+import geotermica from "../assets/types/geotermica.png";
+import biomassa from "../assets/types/biomassa.png";
+import nuclear from "../assets/types/nuclear.png";
 
 export function Consulta() {
   const [cep, setCep] = useState("");
@@ -15,37 +21,37 @@ export function Consulta() {
 
   const icons = {
     Eólica: L.icon({
-      iconUrl: "src/assets/types/eolica.png",
+      iconUrl: eolica,
       iconSize: [50, 50],
       iconAnchor: [25, 40],
       popupAnchor: [1, -30],
     }),
     Solar: L.icon({
-      iconUrl: "src/assets/types/solar.png",
+      iconUrl: solar,
       iconSize: [50, 50],
       iconAnchor: [25, 40],
       popupAnchor: [1, -30],
     }),
     Hidrelétrica: L.icon({
-      iconUrl: "src/assets/types/hidreletrica.png",
+      iconUrl: hidreletrica,
       iconSize: [50, 50],
       iconAnchor: [25, 40],
       popupAnchor: [1, -30],
     }),
     Geotérmica: L.icon({
-      iconUrl: "src/assets/types/geotermica.png",
+      iconUrl: geotermica,
       iconSize: [50, 50],
       iconAnchor: [25, 40],
       popupAnchor: [1, -30],
     }),
     Biomassa: L.icon({
-      iconUrl: "src/assets/types/biomassa.png",
+      iconUrl: biomassa,
       iconSize: [50, 50],
       iconAnchor: [25, 40],
       popupAnchor: [1, -30],
     }),
     Nuclear: L.icon({
-      iconUrl: "src/assets/types/nuclear.png",
+      iconUrl: nuclear,
       iconSize: [50, 50],
       iconAnchor: [25, 40],
       popupAnchor: [1, -30],
