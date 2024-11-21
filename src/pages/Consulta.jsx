@@ -103,14 +103,13 @@ export function Consulta() {
             center={center}
             zoom={15}
             key={center.toString()}
-            style={{ height: "500px", width: "500px" }}
-            dragging={false}
             touchZoom={false}
             scrollWheelZoom={false}
             doubleClickZoom={false}
             boxZoom={false}
             keyboard={false}
             zoomControl={false}
+            style={{ height: "500px", width: "500px", borderRadius: "10px" }}
           >
             <MapView center={center} />
             <TileLayer
@@ -120,7 +119,7 @@ export function Consulta() {
             {points.map((point, index) => (
               <Marker key={index} position={[point.lat, point.lng]}>
                 <Popup>
-                  <b>Companhia {index + 1}</b>
+                  <b>Companhia: {point.name}</b>
                   <br />
                   Tipo: {point.type}
                 </Popup>
