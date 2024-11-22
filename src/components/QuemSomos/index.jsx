@@ -25,7 +25,7 @@ export function QuemSomos() {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/KjlUVl4phAo"
+            src="https://www.youtube.com/embed/YFkWzwxe4LM"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -33,6 +33,7 @@ export function QuemSomos() {
             allowFullScreen
           ></iframe>
           <div className="flex flex-col gap-8">
+            <h2 className="text-white text-center font-extrabold ">GRUPO: Gepetto Reborn 🔋</h2>
             <User
               img="https://github.com/pedrodecf.png"
               nome="Pedro de Freitas"

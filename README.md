@@ -53,15 +53,6 @@ O **Sustergy** busca solucionar a:
 
 ---
 
-### **4. O público-alvo, potenciais clientes**
-
-- **Consumidores residenciais** em todo o Brasil com acesso à internet.
-- Pessoas que utilizam **dispositivos móveis** e aplicativos para gerenciar aspectos do dia a dia.
-- Indivíduos interessados em **sustentabilidade**, **eficiência energética** e **redução de custos**.
-- Famílias que desejam **adotar práticas sustentáveis** e ter **maior controle** sobre o consumo de energia.
-
----
-
 ### **5. Tamanho total do mercado (de preferência com valores monetários)**
 
 - **Total de unidades consumidoras residenciais no Brasil**: Aproximadamente **71 milhões**.
