@@ -54,7 +54,7 @@ export function Preco() {
 
   return (
     <>
-      <Background className="bg-dark-green h-full min-h-screen pb-12">
+      <Background className="bg-dark-green pb-12">
         <img
           src={ellipse}
           alt="ellipse"

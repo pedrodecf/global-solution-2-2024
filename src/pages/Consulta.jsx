@@ -119,7 +119,7 @@ export function Consulta() {
   };
 
   return (
-    <Background className="bg-dark-green h-full min-h-screen pb-12 z-10">
+    <Background className="bg-dark-green pb-12 z-10">
       <img
         src={ellipse}
         alt="ellipse"
